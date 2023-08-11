@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MacroMeals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macro Meals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-ZD-0kU">
+                                <rect key="frame" x="16" y="53" width="361" height="34.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b69-oG-Doj">
+                                <rect key="frame" x="6" y="112" width="381" height="22"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your desired meal here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-lN-hzM">
+                                        <rect key="frame" x="0.0" y="0.0" width="381" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="c2T-5b-RTl"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llq-b2-N0k">
+                                        <rect key="frame" x="0.0" y="20" width="381" height="2"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="qzG-vY-vCJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="flR-jY-cC5"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Then triple tap me to make your meal" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sn8-O9-2XY">
+                                <rect key="frame" x="16" y="142" width="360" height="330"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DM9-Qk-562" appends="YES" id="bcl-8y-Sqx"/>
+                                </connections>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-o3-3Be">
+                                <rect key="frame" x="16" y="480" width="360" height="338"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.30980392159999998" green="0.57647058819999997" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1t4-Vu-VUR"/>
+                            <constraint firstItem="b69-oG-Doj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="HCR-YX-PXT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sn8-O9-2XY" secondAttribute="trailing" constant="17" id="PpK-pp-qxd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sn8-O9-2XY" secondAttribute="trailing" constant="17" id="Rk9-Is-dcx"/>
+                            <constraint firstItem="VKi-o3-3Be" firstAttribute="top" secondItem="Sn8-O9-2XY" secondAttribute="bottom" constant="8" symbolic="YES" id="U8x-ut-V6B"/>
+                            <constraint firstItem="b69-oG-Doj" firstAttribute="top" secondItem="MtZ-ZD-0kU" secondAttribute="bottom" constant="24.670000000000002" id="ab5-RZ-ZfT"/>
+                            <constraint firstItem="VKi-o3-3Be" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cIs-7J-9xP"/>
+                            <constraint firstItem="MtZ-ZD-0kU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="53" id="cc7-Zd-48D"/>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="top" secondItem="b69-oG-Doj" secondAttribute="bottom" constant="8" symbolic="YES" id="chi-If-lSV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MtZ-ZD-0kU" secondAttribute="trailing" constant="16" id="e6U-i7-4Dn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VKi-o3-3Be" secondAttribute="trailing" constant="17" id="gRf-oI-ckM"/>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="top" secondItem="b69-oG-Doj" secondAttribute="bottom" constant="8" symbolic="YES" id="nNn-pP-8yq"/>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oEt-Mk-RV9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sn8-O9-2XY" secondAttribute="bottom" constant="346" id="prf-CK-U8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b69-oG-Doj" secondAttribute="trailing" constant="6" id="vud-7U-8h9"/>
+                            <constraint firstItem="MtZ-ZD-0kU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wM8-Ag-x93"/>
+                            <constraint firstItem="VKi-o3-3Be" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yZz-0X-u1e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="VKi-o3-3Be" id="T9X-Re-i1E"/>
+                        <outlet property="textField" destination="H7F-lN-hzM" id="2pW-uE-z3g"/>
+                        <outlet property="textView" destination="Sn8-O9-2XY" id="rw5-tw-og2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="DM9-Qk-562">
+                    <connections>
+                        <action selector="didDblTap:" destination="BYZ-38-t0r" id="Jqh-aD-Rf1"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
