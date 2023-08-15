@@ -7,13 +7,16 @@
 
 import UIKit
 import OpenAISwift
-
+import CoreHaptics
 
 class ViewController: UIViewController, UITextViewDelegate {
     
     let feedback = UIFeedbackGenerator()
-    var gen = UIImpactFeedbackGenerator(style: .light)
+    var gen: UIImpactFeedbackGenerator?
     var res = String()
+    
+    private var hapticManager: HapticManager?
+
 
     var openAI: OpenAISwift = OpenAISwift(config:
         OpenAISwift
@@ -40,8 +43,18 @@ class ViewController: UIViewController, UITextViewDelegate {
         imageView.layer.borderColor =  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         imageView.layer.cornerRadius = 8
         self.textView.delegate = self
+        gen = UIImpactFeedbackGenerator(style: .rigid)
+        gen?.impactOccurred(intensity: 1.0)
+        gen?.prepare()
 
         view.addGestureRecognizer(tapToHidKeyboard)
+        
+        genHapticFeedBack()
+        genHapticFeedBack()
+        genHapticFeedBack()
+        
+        hapticManager = HapticManager()
+
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -60,22 +73,30 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     
+    
+    func genHapticFeedBack() {
+        print("feedback func")
+        hapticManager?.playSlice()
+
+//        gen?.impactOccurred(intensity: 1.0)
+//        gen?.prepare()
+        
+    }
+    
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         
     }
     func sendToView(message: String) {
         DispatchQueue.main.async {
-            
+            self.gen?.prepare()
             for i in self.res {
-                self.gen.prepare()
                 self.textView.text += "\(i)"
                 self.textViewDidChange(self.textView)
-                
-                
-                self.gen.impactOccurred(intensity: 0.1)
-                RunLoop.current.run(until: Date()+0.01)
-                
+                self.genHapticFeedBack()
+               RunLoop.current.run(until: Date()+0.03)
             }
+            self.textView.isEditable = true
         }
     }
     
@@ -127,4 +148,72 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
 }
+//PRAGMA MARK: Move all this to separate class! but this works so well and feels great!!!
 
+//https://www.kodeco.com/10608020-getting-started-with-core-haptics
+class HapticManager {
+    let engine: CHHapticEngine!
+    
+    init?() {
+        let capability = CHHapticEngine.capabilitiesForHardware()
+        guard capability.supportsHaptics else {
+            return nil
+        }
+        do {
+            engine = try CHHapticEngine()
+        } catch let error {
+            print("Haptic engine creation error: \(error)")
+            return nil
+        }
+        
+        do {
+          try engine.start()
+        } catch let error {
+          print("Haptic failed to start Error: \(error)")
+        }
+        
+        engine.isAutoShutdownEnabled = true
+
+    }
+    
+    func playSlice() {
+      do {
+        // 1
+        let pattern = try slicePattern()
+        // 2
+        try engine.start()
+        // 3
+        let player = try engine.makePlayer(with: pattern)
+        // 4
+        try player.start(atTime: CHHapticTimeImmediate)
+        // 5
+          
+      } catch {
+        print("Failed to play slice: \(error)")
+      }
+    }
+}
+
+extension HapticManager {
+ 
+    private func slicePattern() throws -> CHHapticPattern {
+    let slice = CHHapticEvent(
+        eventType: .hapticTransient,
+      parameters: [
+        CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.15),
+        CHHapticEventParameter(parameterID: .hapticSharpness, value: 1.0)
+      ],
+      relativeTime: 0,
+      duration: 0.05)
+
+    let snip = CHHapticEvent(
+      eventType: .hapticTransient,
+      parameters: [
+        CHHapticEventParameter(parameterID: .hapticIntensity, value: 1.0),
+        CHHapticEventParameter(parameterID: .hapticSharpness, value: 1.0)
+      ],
+      relativeTime: 0.08)
+
+    return try CHHapticPattern(events: [slice, snip], parameters: [])
+  }
+}

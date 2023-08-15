@@ -26,7 +26,7 @@ final class ViewModel: ObservableObject {
         do {
             let params = ImageParameters(
                 prompt: withPrompt,
-                resolution: .medium,
+                resolution: .large,
                 responseFormat: .base64Json
             )
             
