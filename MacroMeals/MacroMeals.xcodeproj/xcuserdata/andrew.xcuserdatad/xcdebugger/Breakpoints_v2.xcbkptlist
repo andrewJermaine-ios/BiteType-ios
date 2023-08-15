@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4D8F501A-C123-4178-B994-870CB6947B7F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7AB6592-4BCB-43F8-9883-56CDE436F0CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacroMeals/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "textViewDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C7AB6592-4BCB-43F8-9883-56CDE436F0CC - 2ff564073f0e0185"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MacroMeals.ViewController.textViewDidChange(__C.UITextView) -&gt; ()"
+                  moduleName = "MacroMeals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Xcode/Public-Apps/macroMeals/macroMeals/MacroMeals/MacroMeals/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "C7AB6592-4BCB-43F8-9883-56CDE436F0CC - 2ff564073f0e01a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MacroMeals.ViewController.textViewDidChange(__C.UITextView) -&gt; ()"
+                  moduleName = "MacroMeals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Xcode/Public-Apps/macroMeals/macroMeals/MacroMeals/MacroMeals/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "C7AB6592-4BCB-43F8-9883-56CDE436F0CC - 2ff564073f0e02ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MacroMeals.ViewController.textViewDidChange(__C.UITextView) -&gt; ()"
+                  moduleName = "MacroMeals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Xcode/Public-Apps/macroMeals/macroMeals/MacroMeals/MacroMeals/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "C7AB6592-4BCB-43F8-9883-56CDE436F0CC - 2ff564073f0e01c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MacroMeals.ViewController.textViewDidChange(__C.UITextView) -&gt; ()"
+                  moduleName = "MacroMeals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Xcode/Public-Apps/macroMeals/macroMeals/MacroMeals/MacroMeals/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDF3CB99-259E-4479-A599-045803015E94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacroMeals/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "textViewDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -20,6 +20,8 @@
 		494CC62A2A86AE4600830A9A /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 494CC6292A86AE4600830A9A /* OpenAISwift */; };
 		494CC62D2A86AE5600830A9A /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 494CC62C2A86AE5600830A9A /* OpenAIKit */; };
 		494CC62F2A86BEF400830A9A /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC62E2A86BEF400830A9A /* ImageGenerator.swift */; };
+		494CC6332A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 494CC6322A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png */; };
+		494CC6352A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 494CC6342A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		494CC6192A86ADE000830A9A /* MacroMealsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsUITests.swift; sourceTree = "<group>"; };
 		494CC61B2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		494CC62E2A86BEF400830A9A /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		494CC6322A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2023-08-12 at 12.05.43 PM.png"; path = "../../../../../../../../var/folders/1d/rp9n8j315gjfkzmn9zmh1xyc0000gn/T/TemporaryItems/NSIRD_screencaptureui_O6qMut/Screenshot 2023-08-12 at 12.05.43 PM.png"; sourceTree = "<group>"; };
+		494CC6342A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2023-08-12 at 12.11.31 PM.png"; path = "../../../../../../../var/folders/1d/rp9n8j315gjfkzmn9zmh1xyc0000gn/T/TemporaryItems/NSIRD_screencaptureui_1SoWTD/Screenshot 2023-08-12 at 12.11.31 PM.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				494CC5F42A86ADDC00830A9A /* MacroMeals */,
+				494CC6342A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png */,
 				494CC60E2A86ADE000830A9A /* MacroMealsTests */,
 				494CC6182A86ADE000830A9A /* MacroMealsUITests */,
 				494CC5F32A86ADDC00830A9A /* Products */,
@@ -116,6 +121,7 @@
 				494CC6032A86ADE000830A9A /* LaunchScreen.storyboard */,
 				494CC6062A86ADE000830A9A /* Info.plist */,
 				494CC5FE2A86ADDC00830A9A /* MacroMeals.xcdatamodeld */,
+				494CC6322A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png */,
 			);
 			path = MacroMeals;
 			sourceTree = "<group>";
@@ -250,7 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				494CC6052A86ADE000830A9A /* LaunchScreen.storyboard in Resources */,
+				494CC6352A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png in Resources */,
 				494CC6022A86ADE000830A9A /* Assets.xcassets in Resources */,
+				494CC6332A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png in Resources */,
 				494CC5FD2A86ADDC00830A9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +376,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -386,10 +396,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -428,6 +440,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -440,9 +454,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -455,26 +471,38 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 2LTAD45734;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroMeals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BiteType;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMeals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MacroMealDevProv2023;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -483,26 +511,38 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 2LTAD45734;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MacroMeals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BiteType;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMeals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MacroMealDevProv2023;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
