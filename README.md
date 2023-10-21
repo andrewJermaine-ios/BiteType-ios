@@ -1,10 +1,10 @@
-# Bite Type 
+# Fire Meals©
 The ai-powered diet-shaper and meal-maker &amp; 
 Hello!
 
 Thanks for your interest! Here's a quick breakdown of what this project is about:
 
-Bite Type is using OpenAi to help build personal diet-based meal plans & recipes, with ai-drawn images of the meals
+Fire Meals© is using OpenAi to help build personal diet-based meal plans & recipes, with ai-drawn images of the meals
 
 Neccessary features will include
 
