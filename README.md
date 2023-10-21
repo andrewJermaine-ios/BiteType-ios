@@ -8,30 +8,33 @@ Fire Meals© is using OpenAi to help build personal diet-based meal plans & reci
 
 Neccessary features will include
 
-# Security Authentication & Identification Methods
-Personalization Profile Creation Diet On-boarding section
-Profile Creation
-Diet On-boarding section
+## Security Authentication & Identification Methods
+- Personalization Profile Creation Diet On-boarding section
+- Profile Creation
+- Diet On-boarding section
 
-# Ai-Functionality
-Ai text generation - ✅ (Can update ChatGPT Versions) \n
-Ai text to image generation -  ✅ (can be improved) \n
-Ai voice to text generation - 🚧 \n
+## Ai-Functionality
+- Ai text generation - ✅ (Can update ChatGPT Versions)
+- Ai text to image generation -  ✅ (can be improved) 
+- Ai voice to text generation - 🚧 
 
-# Results and Tracking
-Saving Responses and Questions
-Image taking (made meals)
+## Results and Tracking
+- Saving Responses and Questions
+- Image taking (made meals)
 
-# Community
-Chat based community section
+## Community
+- Chat based community section
 
 
-# Software Architecture
-Using two design patters
+## Software Architecture
+Using two design patterns:
 
 Strategy Pattern
-For all the User Info, Activity Monitor & Dietary Needs 
+- For all the User Info, Activity Monitor & Dietary Needs
 Ends up building a personalized query depedning their demography and diet, and activity levels
+
+Observer pattern 
+- To build observers that pay attention to the the respones ai, and to kick off other queries and actions
 
 Thank you! This is a living document that can be used as a source of where we are at in the project.
 
