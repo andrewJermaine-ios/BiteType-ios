@@ -16,9 +16,9 @@ Profile Creation
 Diet On-boarding section
 
 Ai-Functionality
-Ai text generation - ✅ (Can update ChatGPT Versions)
-Ai text to image generation -  ✅ (can be improved)
-Ai voice to text generation - 🚧
+Ai text generation - ✅ (Can update ChatGPT Versions) \n
+Ai text to image generation -  ✅ (can be improved) \n
+Ai voice to text generation - 🚧 \n
 
 Results and Tracking
 Saving Responses and Questions
