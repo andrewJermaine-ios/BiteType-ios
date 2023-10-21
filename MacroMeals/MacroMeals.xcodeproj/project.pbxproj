@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		494CC5F62A86ADDC00830A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5F52A86ADDC00830A9A /* AppDelegate.swift */; };
+		494CC5F82A86ADDC00830A9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5F72A86ADDC00830A9A /* SceneDelegate.swift */; };
+		494CC5FA2A86ADDC00830A9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5F92A86ADDC00830A9A /* ViewController.swift */; };
+		494CC5FD2A86ADDC00830A9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494CC5FB2A86ADDC00830A9A /* Main.storyboard */; };
+		494CC6002A86ADDC00830A9A /* MacroMeals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5FE2A86ADDC00830A9A /* MacroMeals.xcdatamodeld */; };
+		494CC6022A86ADE000830A9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494CC6012A86ADE000830A9A /* Assets.xcassets */; };
+		494CC6052A86ADE000830A9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494CC6032A86ADE000830A9A /* LaunchScreen.storyboard */; };
+		494CC6102A86ADE000830A9A /* MacroMealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC60F2A86ADE000830A9A /* MacroMealsTests.swift */; };
+		494CC61A2A86ADE000830A9A /* MacroMealsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC6192A86ADE000830A9A /* MacroMealsUITests.swift */; };
+		494CC61C2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC61B2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift */; };
+		494CC62A2A86AE4600830A9A /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 494CC6292A86AE4600830A9A /* OpenAISwift */; };
+		494CC62D2A86AE5600830A9A /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 494CC62C2A86AE5600830A9A /* OpenAIKit */; };
+		494CC62F2A86BEF400830A9A /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC62E2A86BEF400830A9A /* ImageGenerator.swift */; };
+		494CC6332A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 494CC6322A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png */; };
+		494CC6352A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 494CC6342A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		494CC60C2A86ADE000830A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494CC5EA2A86ADDC00830A9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 494CC5F12A86ADDC00830A9A;
+			remoteInfo = MacroMeals;
+		};
+		494CC6162A86ADE000830A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494CC5EA2A86ADDC00830A9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 494CC5F12A86ADDC00830A9A;
+			remoteInfo = MacroMeals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		494CC5F22A86ADDC00830A9A /* MacroMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		494CC5F52A86ADDC00830A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		494CC5F72A86ADDC00830A9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		494CC5F92A86ADDC00830A9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		494CC5FC2A86ADDC00830A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		494CC5FF2A86ADDC00830A9A /* MacroMeals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacroMeals.xcdatamodel; sourceTree = "<group>"; };
+		494CC6012A86ADE000830A9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		494CC6042A86ADE000830A9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		494CC6062A86ADE000830A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494CC60B2A86ADE000830A9A /* MacroMealsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacroMealsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		494CC60F2A86ADE000830A9A /* MacroMealsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsTests.swift; sourceTree = "<group>"; };
+		494CC6152A86ADE000830A9A /* MacroMealsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacroMealsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		494CC6192A86ADE000830A9A /* MacroMealsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsUITests.swift; sourceTree = "<group>"; };
+		494CC61B2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		494CC62E2A86BEF400830A9A /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		494CC6322A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2023-08-12 at 12.05.43 PM.png"; path = "../../../../../../../../var/folders/1d/rp9n8j315gjfkzmn9zmh1xyc0000gn/T/TemporaryItems/NSIRD_screencaptureui_O6qMut/Screenshot 2023-08-12 at 12.05.43 PM.png"; sourceTree = "<group>"; };
+		494CC6342A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screenshot 2023-08-12 at 12.11.31 PM.png"; path = "../../../../../../../var/folders/1d/rp9n8j315gjfkzmn9zmh1xyc0000gn/T/TemporaryItems/NSIRD_screencaptureui_1SoWTD/Screenshot 2023-08-12 at 12.11.31 PM.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		494CC5EF2A86ADDC00830A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494CC62A2A86AE4600830A9A /* OpenAISwift in Frameworks */,
+				494CC62D2A86AE5600830A9A /* OpenAIKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494CC6082A86ADE000830A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494CC6122A86ADE000830A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		494CC5E92A86ADDC00830A9A = {
+			isa = PBXGroup;
+			children = (
+				494CC5F42A86ADDC00830A9A /* MacroMeals */,
+				494CC6342A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png */,
+				494CC60E2A86ADE000830A9A /* MacroMealsTests */,
+				494CC6182A86ADE000830A9A /* MacroMealsUITests */,
+				494CC5F32A86ADDC00830A9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		494CC5F32A86ADDC00830A9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				494CC5F22A86ADDC00830A9A /* MacroMeals.app */,
+				494CC60B2A86ADE000830A9A /* MacroMealsTests.xctest */,
+				494CC6152A86ADE000830A9A /* MacroMealsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		494CC5F42A86ADDC00830A9A /* MacroMeals */ = {
+			isa = PBXGroup;
+			children = (
+				494CC5F52A86ADDC00830A9A /* AppDelegate.swift */,
+				494CC5F72A86ADDC00830A9A /* SceneDelegate.swift */,
+				494CC5F92A86ADDC00830A9A /* ViewController.swift */,
+				494CC62E2A86BEF400830A9A /* ImageGenerator.swift */,
+				494CC5FB2A86ADDC00830A9A /* Main.storyboard */,
+				494CC6012A86ADE000830A9A /* Assets.xcassets */,
+				494CC6032A86ADE000830A9A /* LaunchScreen.storyboard */,
+				494CC6062A86ADE000830A9A /* Info.plist */,
+				494CC5FE2A86ADDC00830A9A /* MacroMeals.xcdatamodeld */,
+				494CC6322A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png */,
+			);
+			path = MacroMeals;
+			sourceTree = "<group>";
+		};
+		494CC60E2A86ADE000830A9A /* MacroMealsTests */ = {
+			isa = PBXGroup;
+			children = (
+				494CC60F2A86ADE000830A9A /* MacroMealsTests.swift */,
+			);
+			path = MacroMealsTests;
+			sourceTree = "<group>";
+		};
+		494CC6182A86ADE000830A9A /* MacroMealsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				494CC6192A86ADE000830A9A /* MacroMealsUITests.swift */,
+				494CC61B2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift */,
+			);
+			path = MacroMealsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		494CC5F12A86ADDC00830A9A /* MacroMeals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494CC61F2A86ADE000830A9A /* Build configuration list for PBXNativeTarget "MacroMeals" */;
+			buildPhases = (
+				494CC5EE2A86ADDC00830A9A /* Sources */,
+				494CC5EF2A86ADDC00830A9A /* Frameworks */,
+				494CC5F02A86ADDC00830A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacroMeals;
+			packageProductDependencies = (
+				494CC6292A86AE4600830A9A /* OpenAISwift */,
+				494CC62C2A86AE5600830A9A /* OpenAIKit */,
+			);
+			productName = MacroMeals;
+			productReference = 494CC5F22A86ADDC00830A9A /* MacroMeals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		494CC60A2A86ADE000830A9A /* MacroMealsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494CC6222A86ADE000830A9A /* Build configuration list for PBXNativeTarget "MacroMealsTests" */;
+			buildPhases = (
+				494CC6072A86ADE000830A9A /* Sources */,
+				494CC6082A86ADE000830A9A /* Frameworks */,
+				494CC6092A86ADE000830A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				494CC60D2A86ADE000830A9A /* PBXTargetDependency */,
+			);
+			name = MacroMealsTests;
+			productName = MacroMealsTests;
+			productReference = 494CC60B2A86ADE000830A9A /* MacroMealsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		494CC6142A86ADE000830A9A /* MacroMealsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494CC6252A86ADE000830A9A /* Build configuration list for PBXNativeTarget "MacroMealsUITests" */;
+			buildPhases = (
+				494CC6112A86ADE000830A9A /* Sources */,
+				494CC6122A86ADE000830A9A /* Frameworks */,
+				494CC6132A86ADE000830A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				494CC6172A86ADE000830A9A /* PBXTargetDependency */,
+			);
+			name = MacroMealsUITests;
+			productName = MacroMealsUITests;
+			productReference = 494CC6152A86ADE000830A9A /* MacroMealsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		494CC5EA2A86ADDC00830A9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					494CC5F12A86ADDC00830A9A = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					494CC60A2A86ADE000830A9A = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 494CC5F12A86ADDC00830A9A;
+					};
+					494CC6142A86ADE000830A9A = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 494CC5F12A86ADDC00830A9A;
+					};
+				};
+			};
+			buildConfigurationList = 494CC5ED2A86ADDC00830A9A /* Build configuration list for PBXProject "MacroMeals" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 494CC5E92A86ADDC00830A9A;
+			packageReferences = (
+				494CC6282A86AE4600830A9A /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				494CC62B2A86AE5600830A9A /* XCRemoteSwiftPackageReference "OpenAIKit" */,
+			);
+			productRefGroup = 494CC5F32A86ADDC00830A9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				494CC5F12A86ADDC00830A9A /* MacroMeals */,
+				494CC60A2A86ADE000830A9A /* MacroMealsTests */,
+				494CC6142A86ADE000830A9A /* MacroMealsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		494CC5F02A86ADDC00830A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494CC6052A86ADE000830A9A /* LaunchScreen.storyboard in Resources */,
+				494CC6352A8810EC00830A9A /* Screenshot 2023-08-12 at 12.11.31 PM.png in Resources */,
+				494CC6022A86ADE000830A9A /* Assets.xcassets in Resources */,
+				494CC6332A880F9400830A9A /* Screenshot 2023-08-12 at 12.05.43 PM.png in Resources */,
+				494CC5FD2A86ADDC00830A9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494CC6092A86ADE000830A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494CC6132A86ADE000830A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		494CC5EE2A86ADDC00830A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494CC5FA2A86ADDC00830A9A /* ViewController.swift in Sources */,
+				494CC62F2A86BEF400830A9A /* ImageGenerator.swift in Sources */,
+				494CC5F62A86ADDC00830A9A /* AppDelegate.swift in Sources */,
+				494CC5F82A86ADDC00830A9A /* SceneDelegate.swift in Sources */,
+				494CC6002A86ADDC00830A9A /* MacroMeals.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494CC6072A86ADE000830A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494CC6102A86ADE000830A9A /* MacroMealsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494CC6112A86ADE000830A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494CC61C2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift in Sources */,
+				494CC61A2A86ADE000830A9A /* MacroMealsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		494CC60D2A86ADE000830A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 494CC5F12A86ADDC00830A9A /* MacroMeals */;
+			targetProxy = 494CC60C2A86ADE000830A9A /* PBXContainerItemProxy */;
+		};
+		494CC6172A86ADE000830A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 494CC5F12A86ADDC00830A9A /* MacroMeals */;
+			targetProxy = 494CC6162A86ADE000830A9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		494CC5FB2A86ADDC00830A9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494CC5FC2A86ADDC00830A9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		494CC6032A86ADE000830A9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494CC6042A86ADE000830A9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		494CC61D2A86ADE000830A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		494CC61E2A86ADE000830A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		494CC6202A86ADE000830A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = 2LTAD45734;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacroMeals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BiteType;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMeals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MacroMealDevProv2023;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		494CC6212A86ADE000830A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 14;
+				DEVELOPMENT_TEAM = 2LTAD45734;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacroMeals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BiteType;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMeals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MacroMealDevProv2023;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = MacroMealDevProv2023;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		494CC6232A86ADE000830A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2LTAD45734;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMealsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacroMeals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MacroMeals";
+			};
+			name = Debug;
+		};
+		494CC6242A86ADE000830A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2LTAD45734;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMealsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacroMeals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MacroMeals";
+			};
+			name = Release;
+		};
+		494CC6262A86ADE000830A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2LTAD45734;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMealsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MacroMeals;
+			};
+			name = Debug;
+		};
+		494CC6272A86ADE000830A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2LTAD45734;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biteType.MacroMealsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MacroMeals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		494CC5ED2A86ADDC00830A9A /* Build configuration list for PBXProject "MacroMeals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494CC61D2A86ADE000830A9A /* Debug */,
+				494CC61E2A86ADE000830A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494CC61F2A86ADE000830A9A /* Build configuration list for PBXNativeTarget "MacroMeals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494CC6202A86ADE000830A9A /* Debug */,
+				494CC6212A86ADE000830A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494CC6222A86ADE000830A9A /* Build configuration list for PBXNativeTarget "MacroMealsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494CC6232A86ADE000830A9A /* Debug */,
+				494CC6242A86ADE000830A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494CC6252A86ADE000830A9A /* Build configuration list for PBXNativeTarget "MacroMealsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494CC6262A86ADE000830A9A /* Debug */,
+				494CC6272A86ADE000830A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		494CC6282A86AE4600830A9A /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		494CC62B2A86AE5600830A9A /* XCRemoteSwiftPackageReference "OpenAIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcodotio/OpenAIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		494CC6292A86AE4600830A9A /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 494CC6282A86AE4600830A9A /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		494CC62C2A86AE5600830A9A /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 494CC62B2A86AE5600830A9A /* XCRemoteSwiftPackageReference "OpenAIKit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		494CC5FE2A86ADDC00830A9A /* MacroMeals.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				494CC5FF2A86ADDC00830A9A /* MacroMeals.xcdatamodel */,
+			);
+			currentVersion = 494CC5FF2A86ADDC00830A9A /* MacroMeals.xcdatamodel */;
+			path = MacroMeals.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 494CC5EA2A86ADDC00830A9A /* Project object */;
+}

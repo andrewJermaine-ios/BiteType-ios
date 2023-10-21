@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MacroMeals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" text="Make a meal!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sn8-O9-2XY">
+                                <rect key="frame" x="16" y="69" width="360" height="330"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.090196078430000007" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="dPx-U9-Y9p"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DM9-Qk-562" appends="YES" id="bcl-8y-Sqx"/>
+                                </connections>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-o3-3Be">
+                                <rect key="frame" x="16" y="411" width="360" height="338"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.090196078431372548" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="Dya-Qp-TaI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIH-iM-NEs">
+                                <rect key="frame" x="340" y="769" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Isn-H4-Cfx"/>
+                                    <constraint firstAttribute="width" constant="30" id="rJS-fe-0mI"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.53333333329999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="searchBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mI8-Ir-PmD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your desired meal here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-lN-hzM">
+                                <rect key="frame" x="16" y="769" width="308.33333333333331" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7dm-wO-lyr"/>
+                                    <constraint firstAttribute="width" constant="308.32999999999998" id="Q3s-BD-e5R"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-60x60" translatesAutoresizingMaskIntoConstraints="NO" id="Y4a-Cv-exz">
+                                <rect key="frame" x="16" y="31" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="kJw-KK-cMF"/>
+                                    <constraint firstAttribute="height" constant="30" id="urx-TX-bpx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MacroMeals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIS-6I-IH6">
+                                <rect key="frame" x="54" y="36" width="73" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A9W-Kv-Paz"/>
+                                    <constraint firstAttribute="width" constant="73" id="wrK-Jl-cQl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.035511459460102722" blue="0.1049662552869646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="top" secondItem="Y4a-Cv-exz" secondAttribute="bottom" constant="8" symbolic="YES" id="8KW-1G-7Cd"/>
+                            <constraint firstItem="HIH-iM-NEs" firstAttribute="leading" secondItem="H7F-lN-hzM" secondAttribute="trailing" constant="15.67" id="Awk-ah-dkm"/>
+                            <constraint firstItem="LIS-6I-IH6" firstAttribute="leading" secondItem="Y4a-Cv-exz" secondAttribute="trailing" constant="8" symbolic="YES" id="BTq-pK-OGs"/>
+                            <constraint firstItem="Y4a-Cv-exz" firstAttribute="leading" secondItem="Sn8-O9-2XY" secondAttribute="leading" id="MSu-bT-YDw"/>
+                            <constraint firstItem="H7F-lN-hzM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Map-s7-9pf"/>
+                            <constraint firstItem="H7F-lN-hzM" firstAttribute="top" secondItem="VKi-o3-3Be" secondAttribute="bottom" constant="20" id="P7e-iE-bmR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sn8-O9-2XY" secondAttribute="trailing" constant="17" id="Rk9-Is-dcx"/>
+                            <constraint firstItem="HIH-iM-NEs" firstAttribute="top" secondItem="VKi-o3-3Be" secondAttribute="bottom" constant="20" id="UPt-x8-ihz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HIH-iM-NEs" secondAttribute="trailing" constant="23" id="alP-AC-v82"/>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="top" secondItem="LIS-6I-IH6" secondAttribute="bottom" constant="12" id="bMt-Ob-5pe"/>
+                            <constraint firstItem="VKi-o3-3Be" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cIs-7J-9xP"/>
+                            <constraint firstItem="LIS-6I-IH6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="cr0-eb-Lge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VKi-o3-3Be" secondAttribute="trailing" constant="17" id="gRf-oI-ckM"/>
+                            <constraint firstItem="VKi-o3-3Be" firstAttribute="top" secondItem="Sn8-O9-2XY" secondAttribute="bottom" constant="12" id="klf-xl-AtT"/>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oEt-Mk-RV9"/>
+                            <constraint firstItem="Sn8-O9-2XY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="uMG-71-lsc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="VKi-o3-3Be" id="T9X-Re-i1E"/>
+                        <outlet property="textField" destination="H7F-lN-hzM" id="2pW-uE-z3g"/>
+                        <outlet property="textView" destination="Sn8-O9-2XY" id="rw5-tw-og2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="DM9-Qk-562">
+                    <connections>
+                        <action selector="didDblTap:" destination="BYZ-38-t0r" id="Jqh-aD-Rf1"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-App-60x60" width="60" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+    </resources>
+</document>
