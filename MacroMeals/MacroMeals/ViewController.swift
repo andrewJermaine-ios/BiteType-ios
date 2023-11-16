@@ -22,14 +22,17 @@ class ViewController: UIViewController, UITextViewDelegate {
     var openAI: OpenAISwift = OpenAISwift(config:
         OpenAISwift
         .Config
-        .makeDefaultOpenAI(apiKey: "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"))
+        .makeDefaultOpenAI(apiKey: "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"))
     let imageGenerator = ViewModel()
     var image: UIImage?
     var text = ""
+    @IBOutlet weak var iconImage: UIImageView!
+
     @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var textView: UITextView!
     
+    @IBOutlet weak var saveButton: UIButton!
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -38,7 +41,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view.
         let tapToHidKeyboard = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         textField.attributedPlaceholder = NSAttributedString(string: "What sounds good to eat?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        
+        iconImage.layer.cornerRadius = iconImage.frame.size.height/2
         textField.layer.cornerRadius = 14
         textView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textView.layer.borderWidth = 2
@@ -53,6 +56,8 @@ class ViewController: UIViewController, UITextViewDelegate {
        
         view.addGestureRecognizer(tapToHidKeyboard)
         
+        textView.frame.size.width
+        
         
         
         hapticManager = HapticManager()
@@ -60,6 +65,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        saveButton.isHidden = true
         textFieldBottomConstraint = textField.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
         textFieldBottomConstraint?.isActive = true
         imageGenerator.setup()
@@ -145,6 +151,8 @@ class ViewController: UIViewController, UITextViewDelegate {
                 print("we made it", success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
                 self.res = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
                 self.sendToView(message: self.res)
+                
+                
 //                DispatchQueue.main.async {
 //                    //self.textView.text = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
 //                    for i in res {
@@ -189,6 +197,7 @@ class ViewController: UIViewController, UITextViewDelegate {
                 self.genHapticFeedBack()
                RunLoop.current.run(until: Date()+0.005)
             }
+            self.saveButton.isHidden = false
         }
     }
     
@@ -199,6 +208,10 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func didDblTap(_ sender: UITapGestureRecognizer) {
         
+    }
+    
+    @IBAction func savePressed(_ sender: Any) {
+        print("save was pressed")
     }
 }
 //PRAGMA MARK: Move all this to separate class! but this works so well and feels great!!!
