@@ -20,6 +20,8 @@
 		494CC62A2A86AE4600830A9A /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 494CC6292A86AE4600830A9A /* OpenAISwift */; };
 		494CC62D2A86AE5600830A9A /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 494CC62C2A86AE5600830A9A /* OpenAIKit */; };
 		494CC62F2A86BEF400830A9A /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC62E2A86BEF400830A9A /* ImageGenerator.swift */; };
+		4989BA2F2B268FEF00ECEF63 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989BA2E2B268FEF00ECEF63 /* APIKeys.swift */; };
+		49CB81282B1D814400103983 /* FMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CB81272B1D814400103983 /* FMTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		494CC6192A86ADE000830A9A /* MacroMealsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsUITests.swift; sourceTree = "<group>"; };
 		494CC61B2A86ADE000830A9A /* MacroMealsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroMealsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		494CC62E2A86BEF400830A9A /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		4989BA2E2B268FEF00ECEF63 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		49CB81272B1D814400103983 /* FMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FMTextField.swift; path = Utilities/FMTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				494CC6032A86ADE000830A9A /* LaunchScreen.storyboard */,
 				494CC6062A86ADE000830A9A /* Info.plist */,
 				494CC5FE2A86ADDC00830A9A /* MacroMeals.xcdatamodeld */,
+				49CB81272B1D814400103983 /* FMTextField.swift */,
+				4989BA2E2B268FEF00ECEF63 /* APIKeys.swift */,
 			);
 			path = MacroMeals;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 			files = (
 				494CC5FA2A86ADDC00830A9A /* ViewController.swift in Sources */,
 				494CC62F2A86BEF400830A9A /* ImageGenerator.swift in Sources */,
+				4989BA2F2B268FEF00ECEF63 /* APIKeys.swift in Sources */,
+				49CB81282B1D814400103983 /* FMTextField.swift in Sources */,
 				494CC5F62A86ADDC00830A9A /* AppDelegate.swift in Sources */,
 				494CC5F82A86ADDC00830A9A /* SceneDelegate.swift in Sources */,
 				494CC6002A86ADDC00830A9A /* MacroMeals.xcdatamodeld in Sources */,
@@ -467,7 +475,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 2LTAD45734;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -507,7 +515,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 2LTAD45734;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
 				GENERATE_INFOPLIST_FILE = YES;

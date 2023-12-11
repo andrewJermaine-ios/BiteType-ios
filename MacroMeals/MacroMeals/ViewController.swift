@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     var openAI: OpenAISwift = OpenAISwift(config:
         OpenAISwift
         .Config
-        .makeDefaultOpenAI(apiKey: "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"))
+        .makeDefaultOpenAI(apiKey: APIKeys().openAIKey))
     let imageGenerator = ViewModel()
     var image: UIImage?
     var text = ""
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
