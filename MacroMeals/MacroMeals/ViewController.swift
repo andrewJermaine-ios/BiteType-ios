@@ -10,39 +10,32 @@ import OpenAISwift
 import CoreHaptics
 
 class ViewController: UIViewController, UITextViewDelegate {
-    
+    private var observer: NSObjectProtocol?
+    var attributedQuote = NSAttributedString()
     let feedback = UIFeedbackGenerator()
     var gen: UIImpactFeedbackGenerator?
     var res = String()
-    
     private var hapticManager: HapticManager?
     private var textFieldBottomConstraint: NSLayoutConstraint?
-
-
     var openAI: OpenAISwift = OpenAISwift(config:
         OpenAISwift
         .Config
-        .makeDefaultOpenAI(apiKey: "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"))
+        .makeDefaultOpenAI(apiKey: "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"))
     let imageGenerator = ViewModel()
     var image: UIImage?
     var text = ""
     @IBOutlet weak var iconImage: UIImageView!
-
-    @IBOutlet weak var textField: UITextField!
-    
+    @IBOutlet weak var mainTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
-    
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let tapToHidKeyboard = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        textField.attributedPlaceholder = NSAttributedString(string: "What sounds good to eat?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         iconImage.layer.cornerRadius = iconImage.frame.size.height/2
-        textField.layer.cornerRadius = 14
+        mainTextField.layer.cornerRadius = 14
         textView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textView.layer.borderWidth = 2
         textView.layer.cornerRadius = 8
@@ -50,38 +43,36 @@ class ViewController: UIViewController, UITextViewDelegate {
         imageView.layer.borderColor =  #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         imageView.layer.cornerRadius = 8
         self.textView.delegate = self
-        self.textField.delegate = self
-        self.textField.allowsEditingTextAttributes = true
-        self.textField.font = UIFont(name: "Avenir-Medium", size: 20.0)
-       
+        self.mainTextField.delegate = self
         view.addGestureRecognizer(tapToHidKeyboard)
-        
-        textView.frame.size.width
-        
-        
-        
         hapticManager = HapticManager()
 
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-        saveButton.isHidden = true
-        textFieldBottomConstraint = textField.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
+        //mainTextField.typingAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        mainTextField.attributedPlaceholder = NSAttributedString(string: "What sounds good to eat?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        mainTextField.textAlignment = .center
+        mainTextField.font = UIFont(name: "AvenirNext-Medium", size: 20.0)
+        textFieldBottomConstraint = mainTextField.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
         textFieldBottomConstraint?.isActive = true
         imageGenerator.setup()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        saveButton.isEnabled = false
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
 
+
     }
     
     @objc private func keyboardWillShow(_ notification: NSNotification) {
         
-        if textField.isEditing {
+        if mainTextField.isEditing {
             updateViewWithKeyboard(notification: notification, bottomConstraint: self.textFieldBottomConstraint!, keyboardWillShow: true)
         }
         
@@ -93,6 +84,10 @@ class ViewController: UIViewController, UITextViewDelegate {
         
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+       
+    }
+        
     func updateViewWithKeyboard(notification: NSNotification, bottomConstraint: NSLayoutConstraint, keyboardWillShow: Bool) {
         
         guard let userInfo = notification.userInfo,
@@ -135,16 +130,11 @@ class ViewController: UIViewController, UITextViewDelegate {
         hapticManager?.playSlice()
     }
     
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        
-    }
-    
     func askAi() {
         print("Got tapped")
-        print(self.textField.text!)
+        print(self.mainTextField.text!)
         textView.text = ""
-        openAI.sendCompletion(with: textField.text!, maxTokens: 500) { result in
+        openAI.sendCompletion(with: mainTextField.text!, maxTokens: 500) { result in
             switch result {
             case .success(let success):
               
@@ -178,7 +168,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         Task{
             print("button pressed")
             if text.trimmingCharacters(in: .whitespaces).isEmpty {
-                let res = await imageGenerator.generateImage(withPrompt: textField.text!)
+                let res = await imageGenerator.generateImage(withPrompt: mainTextField.text!)
                 if res == nil {
                     print("somehow its nil breven")
                 }
@@ -187,8 +177,10 @@ class ViewController: UIViewController, UITextViewDelegate {
 
             }
         }
-        
+        saveButton.isEnabled = true
     }
+    
+    
     func sendToView(message: String) {
         DispatchQueue.main.async {
             for i in self.res {
@@ -197,7 +189,7 @@ class ViewController: UIViewController, UITextViewDelegate {
                 self.genHapticFeedBack()
                RunLoop.current.run(until: Date()+0.005)
             }
-            self.saveButton.isHidden = false
+           
         }
     }
     
@@ -211,8 +203,10 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        print("save was pressed")
+        print("save pressed")
     }
+    
+
 }
 //PRAGMA MARK: Move all this to separate class! but this works so well and feels great!!!
 
