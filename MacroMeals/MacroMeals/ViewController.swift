@@ -34,7 +34,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let tapToHidKeyboard = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        iconImage.layer.cornerRadius = iconImage.frame.size.height/2
         mainTextField.layer.cornerRadius = 14
         textView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         textView.layer.borderWidth = 2
@@ -199,14 +198,21 @@ class ViewController: UIViewController, UITextViewDelegate {
         askAi()
     }
     @IBAction func didDblTap(_ sender: UITapGestureRecognizer) {
-        
+        print("double tapped")
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = textView.text
+        print(pasteboard.string!)
     }
     
     @IBAction func savePressed(_ sender: Any) {
         print("save pressed")
     }
     
-
+    @IBAction func menuPressed(_ sender: Any) {
+        let saveVC = SavedMealsVC()
+        performSegue(withIdentifier: "savedMealSegue", sender: nil)
+    }
+    
 }
 //PRAGMA MARK: Move all this to separate class! but this works so well and feels great!!!
 

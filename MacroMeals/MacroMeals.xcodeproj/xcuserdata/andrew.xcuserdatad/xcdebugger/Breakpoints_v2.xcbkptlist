@@ -14,8 +14,8 @@
             filePath = "MacroMeals/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "textViewDidChange(_:)"
             landmarkType = "7">
             <Locations>
@@ -92,8 +92,8 @@
             filePath = "MacroMeals/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "genHapticFeedBack()"
             landmarkType = "7">
             <Locations>
@@ -186,8 +186,8 @@
             filePath = "MacroMeals/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "textFieldDidBeginEditing(_:)"
             landmarkType = "7">
             <Locations>
@@ -249,8 +249,8 @@
             filePath = "MacroMeals/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "askAi()"
             landmarkType = "7">
          </BreakpointContent>

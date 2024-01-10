@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492CC6452B4E6E9800706B14 /* SavedMealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492CC6442B4E6E9800706B14 /* SavedMealsVC.swift */; };
+		492CC6482B4E71B100706B14 /* SavedMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492CC6472B4E71B100706B14 /* SavedMealCell.swift */; };
 		494CC5F62A86ADDC00830A9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5F52A86ADDC00830A9A /* AppDelegate.swift */; };
 		494CC5F82A86ADDC00830A9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5F72A86ADDC00830A9A /* SceneDelegate.swift */; };
 		494CC5FA2A86ADDC00830A9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CC5F92A86ADDC00830A9A /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492CC6442B4E6E9800706B14 /* SavedMealsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMealsVC.swift; sourceTree = "<group>"; };
+		492CC6472B4E71B100706B14 /* SavedMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMealCell.swift; sourceTree = "<group>"; };
 		494CC5F22A86ADDC00830A9A /* MacroMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494CC5F52A86ADDC00830A9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494CC5F72A86ADDC00830A9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492CC6462B4E718000706B14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				492CC6472B4E71B100706B14 /* SavedMealCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		494CC5E92A86ADDC00830A9A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 		494CC5F42A86ADDC00830A9A /* MacroMeals */ = {
 			isa = PBXGroup;
 			children = (
+				492CC6462B4E718000706B14 /* Views */,
 				494CC5F52A86ADDC00830A9A /* AppDelegate.swift */,
 				494CC5F72A86ADDC00830A9A /* SceneDelegate.swift */,
 				494CC5F92A86ADDC00830A9A /* ViewController.swift */,
@@ -122,6 +135,7 @@
 				494CC5FE2A86ADDC00830A9A /* MacroMeals.xcdatamodeld */,
 				49CB81272B1D814400103983 /* FMTextField.swift */,
 				4989BA2E2B268FEF00ECEF63 /* APIKeys.swift */,
+				492CC6442B4E6E9800706B14 /* SavedMealsVC.swift */,
 			);
 			path = MacroMeals;
 			sourceTree = "<group>";
@@ -285,7 +299,9 @@
 				494CC5FA2A86ADDC00830A9A /* ViewController.swift in Sources */,
 				494CC62F2A86BEF400830A9A /* ImageGenerator.swift in Sources */,
 				4989BA2F2B268FEF00ECEF63 /* APIKeys.swift in Sources */,
+				492CC6452B4E6E9800706B14 /* SavedMealsVC.swift in Sources */,
 				49CB81282B1D814400103983 /* FMTextField.swift in Sources */,
+				492CC6482B4E71B100706B14 /* SavedMealCell.swift in Sources */,
 				494CC5F62A86ADDC00830A9A /* AppDelegate.swift in Sources */,
 				494CC5F82A86ADDC00830A9A /* SceneDelegate.swift in Sources */,
 				494CC6002A86ADDC00830A9A /* MacroMeals.xcdatamodeld in Sources */,
@@ -475,7 +491,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 2LTAD45734;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -515,7 +531,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Andrew Smith (RMW87V4R7F)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 2LTAD45734;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2LTAD45734;
 				GENERATE_INFOPLIST_FILE = YES;
